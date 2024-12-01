@@ -9,7 +9,8 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background: url('https://i.imgur.com/bw7hj0q.jpeg') no-repeat center center fixed; /* Thêm ảnh nền cho toàn trang */
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,7 +18,7 @@
         }
 
         .form-container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Nền mờ cho form */
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
@@ -137,7 +138,7 @@
             if (username === storedUsername && password === storedPassword) {
                 // Đăng nhập thành công, lưu trạng thái và chuyển trang
                 localStorage.setItem("loggedIn", "true");
-                window.location.href = "https://xyzduy.github.io/L-u-Tr-/luutru.html#";  // Chuyển đến trang chính
+                window.location.href = "https://xyzduy.github.io/xyz/code.html";  // Chuyển đến trang chính
             } else {
                 alert("Tên đăng nhập hoặc mật khẩu không đúng!");
             }
@@ -147,7 +148,7 @@
         window.onload = function() {
             const loggedIn = localStorage.getItem("loggedIn");
             if (loggedIn === "true") {
-                window.location.href = "https://xyzduy.github.io/xyz/code.html";  // Tự động chuyển đến trang chính
+                window.location.href = "https://xyzduy.github.io/xyz/code.html";  // Tự động chuyển đến trang chính nếu đã đăng nhập
             }
         }
     </script>
